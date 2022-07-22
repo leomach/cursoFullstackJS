@@ -1,0 +1,21 @@
+{
+  "name": "funcionarios",
+  "version": "1.0.0",
+  "description": "ansjgnohgf",
+  "main": "funcionarios.js",
+  "scripts": {
+    "start": "nodemon",
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "oanokg",
+    "fjsadngonkd",
+    "gadfgd"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "0.26.1"
+  }
+}

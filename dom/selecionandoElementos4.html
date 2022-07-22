@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #04</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <p>Início</p>
+    </div>
+    <div>
+        <ul>
+            <li>Pedro</li>
+            <li>Ana</li>
+            <li>Bia</li>
+        </ul>
+    </div>
+    <div>
+        <p>Fim</p>
+    </div>
+    <script>
+        function log() {
+            console.log(this)
+        }
+
+        HTMLCollection.prototype.log = log
+        HTMLElement.prototype.log = log
+        NodeList.prototype.log = log
+        Node.prototype.log = log
+
+        // selecionando o pai e o filho
+        const lista = document.querySelector('div ul')
+        lista.parentNode.log()
+        lista.childNodes.log()
+
+        // selecionando o primeiro filho e o proximo filho a partir do primeiro
+        const primeiro = lista.firstChild
+        primeiro.log()
+        primeiro.nextSibling.log()
+
+        // selecionando o ultimo filho e o anterior a ele 
+        const ultimo = lista.lastChild
+        ultimo.log()
+        ultimo.previousSibling.log()
+
+        // todos os filhos, sem espaço
+        lista.children.log()
+        // primeiro filho, sem espaço
+        lista.firstElementChild.log()
+        // ultimo filho, sem espaço
+        lista.lastElementChild.log()
+        // da pra encadiar os comandos, nesse caso:
+        // irmão anterior do pai
+        lista.parentNode.previousElementSibling.log()
+
+        document.querySelectorAll('div ul li').log()
+    </script>
+</body>
+
+</html>
